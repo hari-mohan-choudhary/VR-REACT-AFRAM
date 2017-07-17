@@ -1,0 +1,30 @@
+{
+  "name": "scapic",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "aframe": "^0.6.0",
+    "aframe-animation-component": "^3.2.5",
+    "aframe-particle-system-component": "^1.0.10",
+    "aframe-react": "^4.3.0",
+    "axios": "^0.16.2",
+    "bootstrap": "^3.3.7",
+    "react": "^15.6.1",
+    "react-dom": "^15.6.1",
+    "react-redux": "^5.0.5",
+    "react-vr-cli": "^0.3.5",
+    "redux": "^3.7.2",
+    "redux-logger": "^3.0.6",
+    "redux-react-router": "^1.0.0-beta3",
+    "redux-thunk": "^2.2.0"
+  },
+  "devDependencies": {
+    "react-scripts": "1.0.10"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  }
+}

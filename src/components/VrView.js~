@@ -1,0 +1,68 @@
+import React, { Component } from 'react';
+import 'aframe';
+import 'aframe-particle-system-component';
+import {Entity, Scene} from 'aframe-react';
+import {connect} from 'react-redux';
+
+
+
+
+class VrView extends Component {
+  render() {
+  	const itemindex = this.props.params.imgurl;
+  	const {data} = this.props;
+  let	url = data[itemindex].pano.split('/'); //url = ["serverName","app",...,"bb65efd50ade4b3591dcf7f4c693042b"]
+    url = "../../"+url.pop();  
+  	console.log(url)
+    return (
+    
+	/*			              <a-scene>
+				    <a-assets>
+				    <img id="sky" crossorigin="anonymous" src="http://www.360p.co.uk/wp-content/uploads/2011/05/360-panoramas-truro-park-3-1200x600.jpg"  />
+				       
+				    </a-assets>
+				    <a-sky src="http://www.360p.co.uk/wp-content/uploads/2011/05/360-panoramas-truro-park-3-1200x600.jpg"></a-sky>
+				</a-scene>
+				
+*/
+/* <a-scene>
+  <a-assets>
+    //<audio id="click-sound" src="audio/click.ogg"></audio>
+   
+    <img id="city" src="https://cdn.aframe.io/360-image-gallery-boilerplate/img/city.jpg" />
+    <img id="city-thumb" src="https://cdn.aframe.io/360-image-gallery-boilerplate/img/thumb-city.jpg" />
+    <img id="cubes" src="https://cdn.aframe.io/360-image-gallery-boilerplate/img/cubes.jpg" />
+    <img id="cubes-thumb" src="https://cdn.aframe.io/360-image-gallery-boilerplate/img/thumb-cubes.jpg" />
+    <img id="sechelt" src="https://cdn.aframe.io/360-image-gallery-boilerplate/img/sechelt.jpg" />
+    <img id="secheltthumb" crossorigin="anonymous" src="https://s-media-cache-ak0.pinimg.com/originals/a2/ba/09/a2ba09c212716ae8e5646daf93e1bda6.jpg" />
+  </a-assets>
+  
+  
+  <a-sky id="image-360" radius="10" src="#city"></a-sky>
+  
+  
+ 
+  
+  
+ 
+</a-scene>
+*/
+<a-scene>
+  
+ <a-sky id="image-360" radius="10" src={url} crossorigin="anonymous" ></a-sky>
+</a-scene>
+
+
+
+    );
+  }
+}
+
+
+
+
+const mapStateToProps = (state) => ({
+  data: state.example.data
+});
+export default connect(mapStateToProps)(VrView);
+

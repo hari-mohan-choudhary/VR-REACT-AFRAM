@@ -1,0 +1,47 @@
+.App {
+display: flex;
+}
+
+
+  
+
+.gallery {
+  display: inline-flex;
+  flex-wrap: wrap;
+  
+  
+}
+
+
+@media screen and (max-width: 600px){
+  .imgdiv {
+   width: 20%;
+   height: 300px;
+   padding: 10px;
+  }
+  .imgtxt {
+font-size:18px;  
+  }
+  .App {
+width: 400px;
+height: 300px;
+}
+ }
+ 
+@media screen and (min-width: 600px){
+  .imgdiv {
+   width: 45%;
+   height: 300px;
+   padding: 10px;
+   height: 350px;
+  }
+  .imgtxt {
+font-size:25px;  
+  }
+  .App {
+display: block;
+max-width: 400px;
+height: 300px;
+}
+ } 																																	
+
